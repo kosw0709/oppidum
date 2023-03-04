@@ -1,0 +1,75 @@
+body{
+  font-family: 'Nanum Gothic Coding', monospace;
+}
+
+h3{
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 1.2rem;
+}
+
+.header-par{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header{
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-par{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.content{
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.list_top{
+  font-size: 1.2rem;
+  height: 60px;
+}
+
+table{
+  text-align: center;
+  width: 100%;
+}
+
+.title{
+  width: 400px;
+  text-align: left;
+}
+
+td{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+table a:link{
+  color: black;
+  text-decoration: none;
+}
+table a:visited{
+  color: rgb(196, 196, 196);
+  text-decoration: none;
+}
+
+h3 a:link{
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+h3 a:visited{
+  color: black;
+  text-decoration: none;
+}

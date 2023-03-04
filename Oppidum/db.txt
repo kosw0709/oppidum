@@ -1,0 +1,16 @@
+cd c:\xampp\mysql\bin
+mysql -uroot -p1234
+
+create database sunrin;
+use sunrin;
+
+create table oppidum(
+idx int auto_increment primary key,
+title varchar(100) not null,
+writer varchar(50),
+contents text not null,
+password int(4) not null,
+write_date date,
+view_count int);
+
+

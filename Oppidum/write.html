@@ -1,0 +1,67 @@
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./style/write.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+
+    <script>
+  	$(document).ready(function(){
+  		$("#submit").click(function(){
+  				if($("#title").val().length==0){ alert("제목을 입력해주세요."); $("#title").focus(); return false; }
+  				if($("#ask").val().length==0){ alert("내용을 작성해주세요."); $("#ask").focus(); return false; }
+          if($("#password").val().length==0){ alert("비밀번호를 입력해주세요."); $("#ask").focus(); return false; }
+  			});
+  	});
+
+    function checkNumber(event) {
+      if(event.key === '.'
+        || event.key === '-'
+        || event.key >= 0 && event.key <= 9) {
+          return true;
+        }
+
+      else{
+        alert('숫자만 입력 가능합니다.')
+      }
+
+      return false;
+}
+  	</script>
+  </head>
+  <body>
+    <div class="header-par">
+      <div class="header">
+        <a href="./main.php"><img src="./img/logo.png" width="256px"></a>
+      </div>
+    </div>
+
+    <div class="content-par">
+      <div class="content">
+    <div class="background">
+    <form action="./write_board.php" method="post">
+      <div class="input_top">
+        <div class="title">
+          <input type="text" name="title" id="title" size="50" maxlength="25" placeholder="제목을 입력해주세요.">
+        </div>
+          <div class="password">
+            <input type="password" name="password" id="password" size="10" maxlength="4" onkeypress='return checkNumber(event)' placeholder="비밀번호">
+          </div>
+        </div>
+        <input type="hidden" name="writer" id="writer" value="익명">
+      <br><br>
+      <textarea name="contents" cols=100 rows = 10 id="ask" placeholder="내용을 작성해주세요."></textarea><br><br>
+      <div class="button">
+        <input type="reset"  value="초기화"> &nbsp;&nbsp;
+        <input type="submit"  value="글 등록" id="submit">
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+  </body>
+</html>
